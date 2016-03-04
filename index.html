@@ -1,18 +1,53 @@
-<html>
+<!DOCTYPE HTML>
+<!-------------------------------------------/*
+ *
+ *
+ *  Licensed under the MIT license:
+ *  http://www.opensource.org/licenses/MIT
+ */------------------------------------------>
+<html lang="en">
 <head>
-Swiper Demo
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+	<meta charset="utf-8">
+	<title>Swiper</title>
+	<meta name="viewport" content="width=device-width">
+	<style>
+		html, body{ height:100%; }
+		body{ text-align:center; font-size:12em; margin:0; padding:10px; }
+		div{ height:200px; border:2px solid #CCC; background:#EEE; margin-bottom:10px; }
+		div::before{ height:100%; content:''; vertical-align:middle; display:inline-block; }
+		span{ vertical-align:middle; }
+	</style>
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
 </head>
 <body>
-  <ul>
-    <li>head</li>
-    <li>tail</li>
-    <li>neck</li>
-    <li>eyes</li>
-  </ul>
-  <script src="dist/swiper.js"></script>
-  <script>
-    var el = $("ul");
-    el.initSwiper();
-  </script>
+	<div></div>
+	<div></div>
+	<script src='dist/swiper.js'></script>
+	<script>
+
+		$('div').on('swipe', function(e, d, Dx, Dy){
+			console.log("swipe");
+			// console.log(Dx, Dy);
+		});
+
+		$('div').on('swipeleft', function(e, Dx, Dy){
+			console.log("swipeleft");
+			// console.log(Dx, Dy);
+		});
+		$('div').on('swiperight', function(e, Dx, Dy){
+			console.log("swiperight");
+			// console.log(Dx, Dy);
+		});
+		$('div').on('swipetop', function(e, Dx, Dy){
+			console.log("swipetop");
+			// console.log(Dx, Dy);
+		});
+		$('div').on('swipedown', function(e, Dx, Dy){
+			console.log("swipebottom");
+			// console.log(Dx, Dy);
+		});
+	</script>
 </body>
 </html>

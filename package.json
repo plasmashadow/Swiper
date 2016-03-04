@@ -4,7 +4,7 @@
   "description": "make a swipable list",
   "main": "index.js",
   "scripts": {
-    "build": ".browserify index.js > dist/swiper.js",
+    "build": "browserify index.js > ./dist/swiper.js",
     "min": "uglify -s dist/swiper.js -o dist/swiper.min.js"
   },
   "repository": {
