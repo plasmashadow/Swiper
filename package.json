@@ -1,0 +1,31 @@
+{
+  "name": "swiper",
+  "version": "1.0.0",
+  "description": "make a swipable list",
+  "main": "index.js",
+  "scripts": {
+    "build": ".browserify index.js > dist/swiper.js",
+    "min": "uglify -s dist/swiper.js -o dist/swiper.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plasmashadow/swiper.git"
+  },
+  "keywords": [
+    "swipe",
+    "touch"
+  ],
+  "author": "plasmashadow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plasmashadow/swiper/issues"
+  },
+  "homepage": "https://github.com/plasmashadow/swiper#readme",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "uglify": "^0.1.5"
+  },
+  "dependencies": {
+    "jquery": "^2.2.1"
+  }
+}
